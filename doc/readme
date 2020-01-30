@@ -1,0 +1,5 @@
+hystrix：断路器
+如果服务在调用时出现故障，很可能会导致连锁效应，从而导致整个系统不可用，这种现象我们称之为雪崩效应
+
+hystrix配置信息
+http://cxytiandi.com/blog/detail/13127

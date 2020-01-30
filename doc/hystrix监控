@@ -1,0 +1,16 @@
+项目开启了断路之后再引用spring-boot-starter-actuator本身就会有自己的一个监控信息，只不过是文本形式的，不容易查看
+地址为：http://ip:port/actuator/hystrix.stream
+
+整合dashboard查看监控数据
+	加入如下引用
+	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+	</dependency>
+	
+	访问http://ip:port/hystrix就可以访问到
+	在页面中的第一行，填入http://ip:port/actuator/hystrix.stream
+	delay填入时间，代表多长时间同步一次信息
+	title随便填写
+
+**********只有把dashboard项目部署到下linux或者mac上才好用，否则会一直连不上http://ip:port/actuator/hystrix.stream
